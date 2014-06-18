@@ -1,4 +1,4 @@
-#Cyclone Jave
+#Cyclone Java
 
 Engine classes based on the book [Game Physics: Engine Development](http://www.amazon.com/Game-Physics-Engine-Development-Commercial-Grade/dp/0123819768) by Ian Millington
 
