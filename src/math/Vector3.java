@@ -187,6 +187,20 @@ public class Vector3 {
 	}
 	
 	/**
+	 * Based off Millington's Example. 
+	 * @param a
+	 * @param b
+	 * @param c
+	 */
+	public void makeOrthnormalBasisWithProvided(Vector3 a, Vector3 b, Vector3 c) {
+		a.normalize();
+		c.setAsSelf(a.vectorProduct(b));
+		if(c.squareMagnitude() == 0) return;
+		c.normalize();
+		b.setAsSelf(c.vectorProduct(a));
+	}
+	
+	/**
 	 * Support methods for copying, resetting
 	 */
 	public void setAsSelf(Vector3 vector) {
