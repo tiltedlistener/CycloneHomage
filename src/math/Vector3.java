@@ -106,6 +106,18 @@ public class Vector3 {
 	}
 	
 	/**
+	 * Use this function to add a scaled vector. 
+	 * Useful when we're considering interpolation.
+	 * @param addition
+	 * @param scale
+	 */
+	public void addScaledVector(Vector3 addition, double scale) {
+		this.x += addition.x * scale;
+		this.y += addition.y * scale;
+		this.z += addition.z * scale;
+	}
+	
+	/**
 	 * Subtracts a vector from this one. 
 	 * @param subtrahend
 	 */
