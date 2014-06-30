@@ -48,4 +48,20 @@ public class Particle {
 		// At this point Millington has not defined the accumulator
 	}
 	
+	/**
+	 * kinetic energy equation based on exercise 3.3
+	 * @return a Vector3 of this particle's kinetic energy
+	 */
+	public Vector3 kineticEnergy() {
+		Vector3 currentVelocity = this.velocity.clone();
+		
+		double currentValueOfMass = 0.5 * (1/this.inverseMass);
+		currentVelocity.x = Math.pow(Math.abs(currentVelocity.x), 2);
+		currentVelocity.y = Math.pow(Math.abs(currentVelocity.y), 2);
+		currentVelocity.z = Math.pow(Math.abs(currentVelocity.z), 2);
+		currentVelocity.scalar(currentValueOfMass);
+		
+		return currentVelocity;
+	}
+	
 }
